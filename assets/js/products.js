@@ -3,35 +3,162 @@
 // PRODUCTS.JS
 // ======================================================
 //
-// Images produits :
+// Catalogue central du site.
 //
-// assets/images/products/collier1.png
-// assets/images/products/collier2.png
-// ...
-// assets/images/products/collier10.png
+// DOSSIER DES IMAGES :
 //
-// assets/images/products/pendentif1.png
-// ...
-// assets/images/products/pendentif10.png
+// assets/images/products/
 //
-// assets/images/products/bracelet1.png
-// ...
-// assets/images/products/bracelet10.png
+// IMPORTANT :
+// toutes les images sont en .png.
 //
-// assets/images/products/boucles1.png
-// ...
-// assets/images/products/boucles10.png
+// Chaque catégorie possède exactement 10 images :
 //
-// assets/images/products/corps1.png
-// ...
-// assets/images/products/corps10.png
+// COLLIERS
+// collier1.png
+// collier2.png
+// collier3.png
+// collier4.png
+// collier5.png
+// collier6.png
+// collier7.png
+// collier8.png
+// collier9.png
+// collier10.png
 //
-// assets/images/products/couple1.png
+// PENDENTIFS
+// pendentif1.png
 // ...
-// assets/images/products/couple10.png
+// pendentif10.png
+//
+// BRACELETS
+// bracelet1.png
+// ...
+// bracelet10.png
+//
+// BOUCLES
+// boucles1.png
+// ...
+// boucles10.png
+//
+// BIJOUX DE CORPS
+// corps1.png
+// ...
+// corps10.png
+//
+// COUPLES
+// couple1.png
+// ...
+// couple10.png
 //
 // ======================================================
 
+
+
+// ======================================================
+// IMAGES PAR CATÉGORIE
+// ======================================================
+//
+// Cette partie permet de centraliser les images.
+//
+// Avantage :
+// si un jour tu modifies l'organisation des images,
+// tu peux le faire ici sans rechercher chaque chemin.
+//
+// ======================================================
+
+const CATEGORY_IMAGES = {
+
+  colliers: [
+    "assets/images/products/collier1.png",
+    "assets/images/products/collier2.png",
+    "assets/images/products/collier3.png",
+    "assets/images/products/collier4.png",
+    "assets/images/products/collier5.png",
+    "assets/images/products/collier6.png",
+    "assets/images/products/collier7.png",
+    "assets/images/products/collier8.png",
+    "assets/images/products/collier9.png",
+    "assets/images/products/collier10.png"
+  ],
+
+
+  pendentifs: [
+    "assets/images/products/pendentif1.png",
+    "assets/images/products/pendentif2.png",
+    "assets/images/products/pendentif3.png",
+    "assets/images/products/pendentif4.png",
+    "assets/images/products/pendentif5.png",
+    "assets/images/products/pendentif6.png",
+    "assets/images/products/pendentif7.png",
+    "assets/images/products/pendentif8.png",
+    "assets/images/products/pendentif9.png",
+    "assets/images/products/pendentif10.png"
+  ],
+
+
+  bracelets: [
+    "assets/images/products/bracelet1.png",
+    "assets/images/products/bracelet2.png",
+    "assets/images/products/bracelet3.png",
+    "assets/images/products/bracelet4.png",
+    "assets/images/products/bracelet5.png",
+    "assets/images/products/bracelet6.png",
+    "assets/images/products/bracelet7.png",
+    "assets/images/products/bracelet8.png",
+    "assets/images/products/bracelet9.png",
+    "assets/images/products/bracelet10.png"
+  ],
+
+
+  boucles: [
+    "assets/images/products/boucles1.png",
+    "assets/images/products/boucles2.png",
+    "assets/images/products/boucles3.png",
+    "assets/images/products/boucles4.png",
+    "assets/images/products/boucles5.png",
+    "assets/images/products/boucles6.png",
+    "assets/images/products/boucles7.png",
+    "assets/images/products/boucles8.png",
+    "assets/images/products/boucles9.png",
+    "assets/images/products/boucles10.png"
+  ],
+
+
+  corps: [
+    "assets/images/products/corps1.png",
+    "assets/images/products/corps2.png",
+    "assets/images/products/corps3.png",
+    "assets/images/products/corps4.png",
+    "assets/images/products/corps5.png",
+    "assets/images/products/corps6.png",
+    "assets/images/products/corps7.png",
+    "assets/images/products/corps8.png",
+    "assets/images/products/corps9.png",
+    "assets/images/products/corps10.png"
+  ],
+
+
+  couples: [
+    "assets/images/products/couple1.png",
+    "assets/images/products/couple2.png",
+    "assets/images/products/couple3.png",
+    "assets/images/products/couple4.png",
+    "assets/images/products/couple5.png",
+    "assets/images/products/couple6.png",
+    "assets/images/products/couple7.png",
+    "assets/images/products/couple8.png",
+    "assets/images/products/couple9.png",
+    "assets/images/products/couple10.png"
+  ]
+
+};
+
+
+
+// ======================================================
+// CATALOGUE PRODUITS
+// ======================================================
 
 const PRODUCTS = [
 
@@ -41,12 +168,15 @@ const PRODUCTS = [
 
   {
     id: "collier-elise",
+
     slug: "collier-elise",
 
     name: "Collier Élise",
+
     shortName: "Élise",
 
     category: "colliers",
+
     categoryLabel: "Colliers",
 
     audience: [
@@ -54,7 +184,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "gothique-romantique",
+    collection:
+      "gothique-romantique",
 
     univers: [
       "gothique",
@@ -63,10 +194,13 @@ const PRODUCTS = [
     ],
 
     price: 89,
+
     compareAtPrice: null,
+
     currency: "EUR",
 
-    stone: "Améthyste",
+    stone:
+      "Améthyste",
 
     stones: [
       "Améthyste"
@@ -86,17 +220,26 @@ const PRODUCTS = [
 
     stock: 3,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: true,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      true,
 
-    size: "Ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -111,12 +254,12 @@ const PRODUCTS = [
       "Éviter l’eau prolongée, le parfum direct et les frottements abrasifs. Ranger à plat dans son pochon.",
 
     mainImage:
-      "assets/images/products/collier1.png",
+      CATEGORY_IMAGES.colliers[0],
 
     images: [
-      "assets/images/products/collier1.png",
-      "assets/images/products/collier2.png",
-      "assets/images/products/collier3.png"
+      CATEGORY_IMAGES.colliers[0],
+      CATEGORY_IMAGES.colliers[1],
+      CATEGORY_IMAGES.colliers[2]
     ],
 
     tags: [
@@ -131,12 +274,15 @@ const PRODUCTS = [
 
   {
     id: "collier-nyx",
+
     slug: "collier-nyx",
 
     name: "Collier Nyx",
+
     shortName: "Nyx",
 
     category: "colliers",
+
     categoryLabel: "Colliers",
 
     audience: [
@@ -144,7 +290,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "gothique-nocturne",
+    collection:
+      "gothique-nocturne",
 
     univers: [
       "gothique",
@@ -158,7 +305,8 @@ const PRODUCTS = [
 
     currency: "EUR",
 
-    stone: "Améthyste",
+    stone:
+      "Améthyste",
 
     stones: [
       "Améthyste"
@@ -178,17 +326,26 @@ const PRODUCTS = [
 
     stock: 4,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: true,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      true,
 
-    size: "Ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -203,12 +360,12 @@ const PRODUCTS = [
       "Nettoyer délicatement avec un chiffon sec. Ne pas immerger.",
 
     mainImage:
-      "assets/images/products/collier4.png",
+      CATEGORY_IMAGES.colliers[3],
 
     images: [
-      "assets/images/products/collier4.png",
-      "assets/images/products/collier5.png",
-      "assets/images/products/collier6.png"
+      CATEGORY_IMAGES.colliers[3],
+      CATEGORY_IMAGES.colliers[4],
+      CATEGORY_IMAGES.colliers[5]
     ],
 
     tags: [
@@ -222,12 +379,15 @@ const PRODUCTS = [
 
   {
     id: "collier-luna",
+
     slug: "collier-luna",
 
     name: "Collier Luna",
+
     shortName: "Luna",
 
     category: "colliers",
+
     categoryLabel: "Colliers",
 
     audience: [
@@ -235,7 +395,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "lunaire",
+    collection:
+      "lunaire",
 
     univers: [
       "mystique",
@@ -249,7 +410,8 @@ const PRODUCTS = [
 
     currency: "EUR",
 
-    stone: "Labradorite",
+    stone:
+      "Labradorite",
 
     stones: [
       "Labradorite",
@@ -271,17 +433,26 @@ const PRODUCTS = [
 
     stock: 2,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: false,
-    new: true,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      false,
 
-    size: "Ajustable",
+    new:
+      true,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -296,13 +467,13 @@ const PRODUCTS = [
       "Éviter l’humidité prolongée. Ranger à l’abri de la lumière directe.",
 
     mainImage:
-      "assets/images/products/collier7.png",
+      CATEGORY_IMAGES.colliers[6],
 
     images: [
-      "assets/images/products/collier7.png",
-      "assets/images/products/collier8.png",
-      "assets/images/products/collier9.png",
-      "assets/images/products/collier10.png"
+      CATEGORY_IMAGES.colliers[6],
+      CATEGORY_IMAGES.colliers[7],
+      CATEGORY_IMAGES.colliers[8],
+      CATEGORY_IMAGES.colliers[9]
     ],
 
     tags: [
@@ -314,19 +485,25 @@ const PRODUCTS = [
   },
 
 
+
   // ======================================================
   // PENDENTIFS
   // ======================================================
 
   {
     id: "pendentif-luna",
+
     slug: "pendentif-luna",
 
     name: "Pendentif Luna",
+
     shortName: "Luna",
 
-    category: "pendentifs",
-    categoryLabel: "Pendentifs",
+    category:
+      "pendentifs",
+
+    categoryLabel:
+      "Pendentifs",
 
     audience: [
       "femme",
@@ -334,7 +511,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "lunaire",
+    collection:
+      "lunaire",
 
     univers: [
       "mystique",
@@ -344,11 +522,14 @@ const PRODUCTS = [
 
     price: 59,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Pierre de lune",
+    stone:
+      "Pierre de lune",
 
     stones: [
       "Pierre de lune"
@@ -367,17 +548,26 @@ const PRODUCTS = [
 
     stock: 5,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: false,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      false,
 
-    size: "Cordon ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Cordon ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -392,13 +582,14 @@ const PRODUCTS = [
       "Éviter eau, parfum et produits chimiques.",
 
     mainImage:
-      "assets/images/products/pendentif1.png",
+      CATEGORY_IMAGES.pendentifs[0],
 
     images: [
-      "assets/images/products/pendentif1.png",
-      "assets/images/products/pendentif2.png",
-      "assets/images/products/pendentif3.png",
-      "assets/images/products/pendentif4.png"
+      CATEGORY_IMAGES.pendentifs[0],
+      CATEGORY_IMAGES.pendentifs[1],
+      CATEGORY_IMAGES.pendentifs[2],
+      CATEGORY_IMAGES.pendentifs[3],
+      CATEGORY_IMAGES.pendentifs[4]
     ],
 
     tags: [
@@ -412,13 +603,21 @@ const PRODUCTS = [
 
   {
     id: "pendentif-nebuleuse",
-    slug: "pendentif-nebuleuse",
 
-    name: "Pendentif Nébuleuse",
-    shortName: "Nébuleuse",
+    slug:
+      "pendentif-nebuleuse",
 
-    category: "pendentifs",
-    categoryLabel: "Pendentifs",
+    name:
+      "Pendentif Nébuleuse",
+
+    shortName:
+      "Nébuleuse",
+
+    category:
+      "pendentifs",
+
+    categoryLabel:
+      "Pendentifs",
 
     audience: [
       "femme",
@@ -426,7 +625,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "cosmique",
+    collection:
+      "cosmique",
 
     univers: [
       "mystique",
@@ -436,11 +636,14 @@ const PRODUCTS = [
 
     price: 79,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Labradorite",
+    stone:
+      "Labradorite",
 
     stones: [
       "Labradorite",
@@ -461,17 +664,26 @@ const PRODUCTS = [
 
     stock: 2,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: true,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      true,
 
-    size: "Cordon ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Cordon ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -486,15 +698,14 @@ const PRODUCTS = [
       "Essuyer avec un chiffon doux et conserver au sec.",
 
     mainImage:
-      "assets/images/products/pendentif5.png",
+      CATEGORY_IMAGES.pendentifs[5],
 
     images: [
-      "assets/images/products/pendentif5.png",
-      "assets/images/products/pendentif6.png",
-      "assets/images/products/pendentif7.png",
-      "assets/images/products/pendentif8.png",
-      "assets/images/products/pendentif9.png",
-      "assets/images/products/pendentif10.png"
+      CATEGORY_IMAGES.pendentifs[5],
+      CATEGORY_IMAGES.pendentifs[6],
+      CATEGORY_IMAGES.pendentifs[7],
+      CATEGORY_IMAGES.pendentifs[8],
+      CATEGORY_IMAGES.pendentifs[9]
     ],
 
     tags: [
@@ -506,26 +717,37 @@ const PRODUCTS = [
   },
 
 
+
   // ======================================================
   // BRACELETS
   // ======================================================
 
   {
-    id: "bracelet-selene",
-    slug: "bracelet-selene",
+    id:
+      "bracelet-selene",
 
-    name: "Bracelet Séléné",
-    shortName: "Séléné",
+    slug:
+      "bracelet-selene",
 
-    category: "bracelets",
-    categoryLabel: "Bracelets",
+    name:
+      "Bracelet Séléné",
+
+    shortName:
+      "Séléné",
+
+    category:
+      "bracelets",
+
+    categoryLabel:
+      "Bracelets",
 
     audience: [
       "femme",
       "unisexe"
     ],
 
-    collection: "lunaire",
+    collection:
+      "lunaire",
 
     univers: [
       "mystique",
@@ -535,11 +757,14 @@ const PRODUCTS = [
 
     price: 49,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Pierre de lune",
+    stone:
+      "Pierre de lune",
 
     stones: [
       "Pierre de lune"
@@ -558,17 +783,26 @@ const PRODUCTS = [
 
     stock: 6,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: true,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      true,
 
-    size: "Ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -583,12 +817,12 @@ const PRODUCTS = [
       "Retirer avant douche, baignade ou sport.",
 
     mainImage:
-      "assets/images/products/bracelet1.png",
+      CATEGORY_IMAGES.bracelets[0],
 
     images: [
-      "assets/images/products/bracelet1.png",
-      "assets/images/products/bracelet2.png",
-      "assets/images/products/bracelet3.png"
+      CATEGORY_IMAGES.bracelets[0],
+      CATEGORY_IMAGES.bracelets[1],
+      CATEGORY_IMAGES.bracelets[2]
     ],
 
     tags: [
@@ -601,21 +835,31 @@ const PRODUCTS = [
 
 
   {
-    id: "bracelet-astra",
-    slug: "bracelet-astra",
+    id:
+      "bracelet-astra",
 
-    name: "Bracelet Astra",
-    shortName: "Astra",
+    slug:
+      "bracelet-astra",
 
-    category: "bracelets",
-    categoryLabel: "Bracelets",
+    name:
+      "Bracelet Astra",
+
+    shortName:
+      "Astra",
+
+    category:
+      "bracelets",
+
+    categoryLabel:
+      "Bracelets",
 
     audience: [
       "femme",
       "unisexe"
     ],
 
-    collection: "cosmique",
+    collection:
+      "cosmique",
 
     univers: [
       "gothique",
@@ -625,11 +869,14 @@ const PRODUCTS = [
 
     price: 49,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Améthyste",
+    stone:
+      "Améthyste",
 
     stones: [
       "Améthyste"
@@ -649,17 +896,26 @@ const PRODUCTS = [
 
     stock: 4,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: false,
-    new: true,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      false,
 
-    size: "Ajustable",
+    new:
+      true,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -674,12 +930,12 @@ const PRODUCTS = [
       "Éviter l’immersion prolongée.",
 
     mainImage:
-      "assets/images/products/bracelet4.png",
+      CATEGORY_IMAGES.bracelets[3],
 
     images: [
-      "assets/images/products/bracelet4.png",
-      "assets/images/products/bracelet5.png",
-      "assets/images/products/bracelet6.png"
+      CATEGORY_IMAGES.bracelets[3],
+      CATEGORY_IMAGES.bracelets[4],
+      CATEGORY_IMAGES.bracelets[5]
     ],
 
     tags: [
@@ -692,14 +948,23 @@ const PRODUCTS = [
 
 
   {
-    id: "bracelet-orphee",
-    slug: "bracelet-orphee",
+    id:
+      "bracelet-orphee",
 
-    name: "Bracelet Orphée",
-    shortName: "Orphée",
+    slug:
+      "bracelet-orphee",
 
-    category: "bracelets",
-    categoryLabel: "Bracelets",
+    name:
+      "Bracelet Orphée",
+
+    shortName:
+      "Orphée",
+
+    category:
+      "bracelets",
+
+    categoryLabel:
+      "Bracelets",
 
     audience: [
       "homme",
@@ -707,7 +972,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "gothique-nocturne",
+    collection:
+      "gothique-nocturne",
 
     univers: [
       "gothique",
@@ -717,11 +983,14 @@ const PRODUCTS = [
 
     price: 52,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Onyx noir",
+    stone:
+      "Onyx noir",
 
     stones: [
       "Onyx noir",
@@ -742,17 +1011,26 @@ const PRODUCTS = [
 
     stock: 4,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: true,
-    new: false,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      true,
 
-    size: "Ajustable",
+    new:
+      false,
+
+    adjustable:
+      true,
+
+    size:
+      "Ajustable",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -767,13 +1045,13 @@ const PRODUCTS = [
       "Nettoyer au chiffon doux et ranger au sec.",
 
     mainImage:
-      "assets/images/products/bracelet7.png",
+      CATEGORY_IMAGES.bracelets[6],
 
     images: [
-      "assets/images/products/bracelet7.png",
-      "assets/images/products/bracelet8.png",
-      "assets/images/products/bracelet9.png",
-      "assets/images/products/bracelet10.png"
+      CATEGORY_IMAGES.bracelets[6],
+      CATEGORY_IMAGES.bracelets[7],
+      CATEGORY_IMAGES.bracelets[8],
+      CATEGORY_IMAGES.bracelets[9]
     ],
 
     tags: [
@@ -786,26 +1064,37 @@ const PRODUCTS = [
   },
 
 
+
   // ======================================================
   // BOUCLES D’OREILLES
   // ======================================================
 
   {
-    id: "boucles-aurore",
-    slug: "boucles-aurore",
+    id:
+      "boucles-aurore",
 
-    name: "Boucles Aurore",
-    shortName: "Aurore",
+    slug:
+      "boucles-aurore",
 
-    category: "boucles-oreilles",
-    categoryLabel: "Boucles d’oreilles",
+    name:
+      "Boucles Aurore",
+
+    shortName:
+      "Aurore",
+
+    category:
+      "boucles-oreilles",
+
+    categoryLabel:
+      "Boucles d’oreilles",
 
     audience: [
       "femme",
       "unisexe"
     ],
 
-    collection: "gothique-romantique",
+    collection:
+      "gothique-romantique",
 
     univers: [
       "romantique",
@@ -815,11 +1104,14 @@ const PRODUCTS = [
 
     price: 45,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Améthyste",
+    stone:
+      "Améthyste",
 
     stones: [
       "Améthyste"
@@ -839,17 +1131,26 @@ const PRODUCTS = [
 
     stock: 4,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: true,
-    bestseller: false,
-    new: false,
+    featured:
+      true,
 
-    adjustable: false,
+    bestseller:
+      false,
 
-    size: "Paire",
+    new:
+      false,
+
+    adjustable:
+      false,
+
+    size:
+      "Paire",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -864,14 +1165,14 @@ const PRODUCTS = [
       "Retirer avant douche et sommeil.",
 
     mainImage:
-      "assets/images/products/boucles1.png",
+      CATEGORY_IMAGES.boucles[0],
 
     images: [
-      "assets/images/products/boucles1.png",
-      "assets/images/products/boucles2.png",
-      "assets/images/products/boucles3.png",
-      "assets/images/products/boucles4.png",
-      "assets/images/products/boucles5.png"
+      CATEGORY_IMAGES.boucles[0],
+      CATEGORY_IMAGES.boucles[1],
+      CATEGORY_IMAGES.boucles[2],
+      CATEGORY_IMAGES.boucles[3],
+      CATEGORY_IMAGES.boucles[4]
     ],
 
     tags: [
@@ -884,21 +1185,31 @@ const PRODUCTS = [
 
 
   {
-    id: "boucles-vesper",
-    slug: "boucles-vesper",
+    id:
+      "boucles-vesper",
 
-    name: "Boucles Vesper",
-    shortName: "Vesper",
+    slug:
+      "boucles-vesper",
 
-    category: "boucles-oreilles",
-    categoryLabel: "Boucles d’oreilles",
+    name:
+      "Boucles Vesper",
+
+    shortName:
+      "Vesper",
+
+    category:
+      "boucles-oreilles",
+
+    categoryLabel:
+      "Boucles d’oreilles",
 
     audience: [
       "femme",
       "unisexe"
     ],
 
-    collection: "gothique-nocturne",
+    collection:
+      "gothique-nocturne",
 
     univers: [
       "gothique",
@@ -908,11 +1219,14 @@ const PRODUCTS = [
 
     price: 42,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Améthyste",
+    stone:
+      "Améthyste",
 
     stones: [
       "Améthyste"
@@ -932,17 +1246,26 @@ const PRODUCTS = [
 
     stock: 3,
 
-    availability: "in-stock",
+    availability:
+      "in-stock",
 
-    madeToOrder: false,
+    madeToOrder:
+      false,
 
-    featured: false,
-    bestseller: false,
-    new: true,
+    featured:
+      false,
 
-    adjustable: false,
+    bestseller:
+      false,
 
-    size: "Paire",
+    new:
+      true,
+
+    adjustable:
+      false,
+
+    size:
+      "Paire",
 
     leadTime:
       "Expédition sous 2 à 4 jours ouvrés",
@@ -957,14 +1280,14 @@ const PRODUCTS = [
       "Conserver à l’abri de l’humidité.",
 
     mainImage:
-      "assets/images/products/boucles6.png",
+      CATEGORY_IMAGES.boucles[5],
 
     images: [
-      "assets/images/products/boucles6.png",
-      "assets/images/products/boucles7.png",
-      "assets/images/products/boucles8.png",
-      "assets/images/products/boucles9.png",
-      "assets/images/products/boucles10.png"
+      CATEGORY_IMAGES.boucles[5],
+      CATEGORY_IMAGES.boucles[6],
+      CATEGORY_IMAGES.boucles[7],
+      CATEGORY_IMAGES.boucles[8],
+      CATEGORY_IMAGES.boucles[9]
     ],
 
     tags: [
@@ -976,28 +1299,40 @@ const PRODUCTS = [
   },
 
 
+
   // ======================================================
   // BIJOUX DE CORPS
   // ======================================================
 
   {
-    id: "chaine-taille-nyx",
-    slug: "chaine-taille-nyx",
+    id:
+      "chaine-taille-nyx",
 
-    name: "Chaîne de taille Nyx",
-    shortName: "Nyx Taille",
+    slug:
+      "chaine-taille-nyx",
 
-    category: "bijoux-corps",
-    categoryLabel: "Bijoux de corps",
+    name:
+      "Chaîne de taille Nyx",
 
-    subcategory: "chaine-taille",
+    shortName:
+      "Nyx Taille",
+
+    category:
+      "bijoux-corps",
+
+    categoryLabel:
+      "Bijoux de corps",
+
+    subcategory:
+      "chaine-taille",
 
     audience: [
       "femme",
       "unisexe"
     ],
 
-    collection: "gothique-nocturne",
+    collection:
+      "gothique-nocturne",
 
     univers: [
       "gothique",
@@ -1007,11 +1342,14 @@ const PRODUCTS = [
 
     price: 69,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Pierre de lune",
+    stone:
+      "Pierre de lune",
 
     stones: [
       "Pierre de lune"
@@ -1031,15 +1369,23 @@ const PRODUCTS = [
 
     stock: 1,
 
-    availability: "made-to-order",
+    availability:
+      "made-to-order",
 
-    madeToOrder: true,
+    madeToOrder:
+      true,
 
-    featured: true,
-    bestseller: false,
-    new: true,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      false,
+
+    new:
+      true,
+
+    adjustable:
+      true,
 
     size:
       "Sur mesure / ajustable",
@@ -1057,14 +1403,14 @@ const PRODUCTS = [
       "Port décoratif uniquement. Retirer avant activité sportive, douche ou sommeil.",
 
     mainImage:
-      "assets/images/products/corps1.png",
+      CATEGORY_IMAGES.corps[0],
 
     images: [
-      "assets/images/products/corps1.png",
-      "assets/images/products/corps2.png",
-      "assets/images/products/corps3.png",
-      "assets/images/products/corps4.png",
-      "assets/images/products/corps5.png"
+      CATEGORY_IMAGES.corps[0],
+      CATEGORY_IMAGES.corps[1],
+      CATEGORY_IMAGES.corps[2],
+      CATEGORY_IMAGES.corps[3],
+      CATEGORY_IMAGES.corps[4]
     ],
 
     tags: [
@@ -1077,16 +1423,26 @@ const PRODUCTS = [
 
 
   {
-    id: "bijou-corps-eclipse",
-    slug: "bijou-corps-eclipse",
+    id:
+      "bijou-corps-eclipse",
 
-    name: "Bijou de corps Éclipse",
-    shortName: "Éclipse",
+    slug:
+      "bijou-corps-eclipse",
 
-    category: "bijoux-corps",
-    categoryLabel: "Bijoux de corps",
+    name:
+      "Bijou de corps Éclipse",
 
-    subcategory: "harnais-simple",
+    shortName:
+      "Éclipse",
+
+    category:
+      "bijoux-corps",
+
+    categoryLabel:
+      "Bijoux de corps",
+
+    subcategory:
+      "harnais-simple",
 
     audience: [
       "femme",
@@ -1094,7 +1450,8 @@ const PRODUCTS = [
       "unisexe"
     ],
 
-    collection: "eclipse",
+    collection:
+      "eclipse",
 
     univers: [
       "gothique",
@@ -1105,11 +1462,14 @@ const PRODUCTS = [
 
     price: 98,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
-    stone: "Onyx noir",
+    stone:
+      "Onyx noir",
 
     stones: [
       "Onyx noir"
@@ -1129,17 +1489,26 @@ const PRODUCTS = [
 
     stock: 0,
 
-    availability: "made-to-order",
+    availability:
+      "made-to-order",
 
-    madeToOrder: true,
+    madeToOrder:
+      true,
 
-    featured: true,
-    bestseller: false,
-    new: true,
+    featured:
+      true,
 
-    adjustable: true,
+    bestseller:
+      false,
 
-    size: "Sur mesure",
+    new:
+      true,
+
+    adjustable:
+      true,
+
+    size:
+      "Sur mesure",
 
     leadTime:
       "Fabrication sous 10 à 21 jours",
@@ -1154,14 +1523,14 @@ const PRODUCTS = [
       "Port décoratif uniquement. Non conçu pour supporter une charge ou servir à l’immobilisation.",
 
     mainImage:
-      "assets/images/products/corps6.png",
+      CATEGORY_IMAGES.corps[5],
 
     images: [
-      "assets/images/products/corps6.png",
-      "assets/images/products/corps7.png",
-      "assets/images/products/corps8.png",
-      "assets/images/products/corps9.png",
-      "assets/images/products/corps10.png"
+      CATEGORY_IMAGES.corps[5],
+      CATEGORY_IMAGES.corps[6],
+      CATEGORY_IMAGES.corps[7],
+      CATEGORY_IMAGES.corps[8],
+      CATEGORY_IMAGES.corps[9]
     ],
 
     tags: [
@@ -1173,25 +1542,36 @@ const PRODUCTS = [
   },
 
 
+
   // ======================================================
   // COUPLES
   // ======================================================
 
   {
-    id: "duo-ames-soeurs",
-    slug: "duo-ames-soeurs",
+    id:
+      "duo-ames-soeurs",
 
-    name: "Duo Âmes Sœurs",
-    shortName: "Âmes Sœurs",
+    slug:
+      "duo-ames-soeurs",
 
-    category: "couples",
-    categoryLabel: "Couples",
+    name:
+      "Duo Âmes Sœurs",
+
+    shortName:
+      "Âmes Sœurs",
+
+    category:
+      "couples",
+
+    categoryLabel:
+      "Couples",
 
     audience: [
       "couple"
     ],
 
-    collection: "liens",
+    collection:
+      "liens",
 
     univers: [
       "romantique",
@@ -1201,9 +1581,11 @@ const PRODUCTS = [
 
     price: 120,
 
-    compareAtPrice: null,
+    compareAtPrice:
+      null,
 
-    currency: "EUR",
+    currency:
+      "EUR",
 
     stone:
       "Onyx & Labradorite",
@@ -1261,19 +1643,19 @@ const PRODUCTS = [
       "Conserver séparément dans les pochons fournis.",
 
     mainImage:
-      "assets/images/products/couple1.png",
+      CATEGORY_IMAGES.couples[0],
 
     images: [
-      "assets/images/products/couple1.png",
-      "assets/images/products/couple2.png",
-      "assets/images/products/couple3.png",
-      "assets/images/products/couple4.png",
-      "assets/images/products/couple5.png",
-      "assets/images/products/couple6.png",
-      "assets/images/products/couple7.png",
-      "assets/images/products/couple8.png",
-      "assets/images/products/couple9.png",
-      "assets/images/products/couple10.png"
+      CATEGORY_IMAGES.couples[0],
+      CATEGORY_IMAGES.couples[1],
+      CATEGORY_IMAGES.couples[2],
+      CATEGORY_IMAGES.couples[3],
+      CATEGORY_IMAGES.couples[4],
+      CATEGORY_IMAGES.couples[5],
+      CATEGORY_IMAGES.couples[6],
+      CATEGORY_IMAGES.couples[7],
+      CATEGORY_IMAGES.couples[8],
+      CATEGORY_IMAGES.couples[9]
     ],
 
     tags: [
@@ -1429,7 +1811,7 @@ const PRODUCT_FILTERS = {
 
 
 // ======================================================
-// HELPERS
+// RÉCUPÉRER UN PRODUIT PAR ID
 // ======================================================
 
 function getProductById(id) {
@@ -1445,6 +1827,10 @@ function getProductById(id) {
 
 
 
+// ======================================================
+// RÉCUPÉRER UN PRODUIT PAR SLUG
+// ======================================================
+
 function getProductBySlug(slug) {
 
   return PRODUCTS.find(
@@ -1458,6 +1844,10 @@ function getProductBySlug(slug) {
 
 
 
+// ======================================================
+// PRODUITS PAR CATÉGORIE
+// ======================================================
+
 function getProductsByCategory(category) {
 
   return PRODUCTS.filter(
@@ -1468,6 +1858,10 @@ function getProductsByCategory(category) {
 }
 
 
+
+// ======================================================
+// PRODUITS PAR PUBLIC
+// ======================================================
 
 function getProductsByAudience(audience) {
 
@@ -1482,6 +1876,10 @@ function getProductsByAudience(audience) {
 
 
 
+// ======================================================
+// PRODUITS PAR UNIVERS
+// ======================================================
+
 function getProductsByUniverse(universe) {
 
   return PRODUCTS.filter(
@@ -1494,6 +1892,10 @@ function getProductsByUniverse(universe) {
 }
 
 
+
+// ======================================================
+// PRODUITS PAR PIERRE
+// ======================================================
 
 function getProductsByStone(stone) {
 
@@ -1508,6 +1910,10 @@ function getProductsByStone(stone) {
 
 
 
+// ======================================================
+// PRODUITS MIS EN AVANT
+// ======================================================
+
 function getFeaturedProducts() {
 
   return PRODUCTS.filter(
@@ -1518,6 +1924,10 @@ function getFeaturedProducts() {
 }
 
 
+
+// ======================================================
+// BEST-SELLERS
+// ======================================================
 
 function getBestsellers() {
 
@@ -1530,6 +1940,10 @@ function getBestsellers() {
 
 
 
+// ======================================================
+// NOUVEAUTÉS
+// ======================================================
+
 function getNewProducts() {
 
   return PRODUCTS.filter(
@@ -1541,12 +1955,15 @@ function getNewProducts() {
 
 
 
+// ======================================================
+// PRODUITS EN STOCK
+// ======================================================
+
 function getProductsInStock() {
 
   return PRODUCTS.filter(
     product =>
-      product.availability
-      ===
+      product.availability ===
       "in-stock"
   );
 
@@ -1554,14 +1971,33 @@ function getProductsInStock() {
 
 
 
+// ======================================================
+// PRODUITS SUR COMMANDE
+// ======================================================
+
 function getMadeToOrderProducts() {
 
   return PRODUCTS.filter(
     product =>
-      product.availability
-      ===
+      product.availability ===
       "made-to-order"
   );
+
+}
+
+
+
+// ======================================================
+// IMAGES D'UNE CATÉGORIE
+// ======================================================
+
+function getCategoryImages(category) {
+
+  return CATEGORY_IMAGES[
+    category
+  ]
+  ||
+  [];
 
 }
 
@@ -1574,11 +2010,17 @@ function getMadeToOrderProducts() {
 function filterProducts({
 
   category = null,
+
   audience = null,
+
   universe = null,
+
   stone = null,
+
   availability = null,
+
   minPrice = null,
+
   maxPrice = null
 
 } = {}) {
@@ -1591,7 +2033,8 @@ function filterProducts({
       if (
         category
         &&
-        product.category !== category
+        product.category !==
+        category
       ) {
 
         return false;
@@ -1641,8 +2084,7 @@ function filterProducts({
       if (
         availability
         &&
-        product.availability
-        !==
+        product.availability !==
         availability
       ) {
 
@@ -1654,7 +2096,13 @@ function filterProducts({
       if (
         minPrice !== null
         &&
-        product.price < minPrice
+        Number(
+          product.price
+        )
+        <
+        Number(
+          minPrice
+        )
       ) {
 
         return false;
@@ -1665,7 +2113,13 @@ function filterProducts({
       if (
         maxPrice !== null
         &&
-        product.price > maxPrice
+        Number(
+          product.price
+        )
+        >
+        Number(
+          maxPrice
+        )
       ) {
 
         return false;
@@ -1683,7 +2137,7 @@ function filterProducts({
 
 
 // ======================================================
-// RECHERCHE
+// RECHERCHE TEXTE
 // ======================================================
 
 function searchProducts(query) {
@@ -1696,13 +2150,9 @@ function searchProducts(query) {
 
 
   const normalizedQuery =
-    query
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(
-        /[\u0300-\u036f]/g,
-        ""
-      );
+    normalizeSearchText(
+      query
+    );
 
 
   return PRODUCTS.filter(
@@ -1712,27 +2162,39 @@ function searchProducts(query) {
       const searchableText = [
 
         product.name,
+
         product.shortName,
+
+        product.category,
+
         product.categoryLabel,
+
+        product.collection,
+
         product.stone,
 
+        product.description,
+
+        product.symbolism,
+
         ...(product.stones || []),
+
         ...(product.univers || []),
+
+        ...(product.audience || []),
+
         ...(product.tags || [])
 
       ]
-        .join(" ")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(
-          /[\u0300-\u036f]/g,
-          ""
+        .join(" ");
+
+
+      return normalizeSearchText(
+        searchableText
+      )
+        .includes(
+          normalizedQuery
         );
-
-
-      return searchableText.includes(
-        normalizedQuery
-      );
 
     }
   );
@@ -1742,7 +2204,27 @@ function searchProducts(query) {
 
 
 // ======================================================
-// PRIX
+// NORMALISATION DE RECHERCHE
+// ======================================================
+
+function normalizeSearchText(value) {
+
+  return String(
+    value || ""
+  )
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(
+      /[\u0300-\u036f]/g,
+      ""
+    );
+
+}
+
+
+
+// ======================================================
+// FORMAT PRIX
 // ======================================================
 
 function formatPrice(price) {
@@ -1770,8 +2252,17 @@ function formatPrice(price) {
 
 
 // ======================================================
-// EXPORT GLOBAL
+// EXPORTS GLOBAUX
 // ======================================================
+//
+// Ces fonctions deviennent accessibles
+// depuis toutes les pages HTML.
+//
+// ======================================================
+
+window.CATEGORY_IMAGES =
+  CATEGORY_IMAGES;
+
 
 window.PRODUCTS =
   PRODUCTS;
@@ -1825,12 +2316,20 @@ window.getMadeToOrderProducts =
   getMadeToOrderProducts;
 
 
+window.getCategoryImages =
+  getCategoryImages;
+
+
 window.filterProducts =
   filterProducts;
 
 
 window.searchProducts =
   searchProducts;
+
+
+window.normalizeSearchText =
+  normalizeSearchText;
 
 
 window.formatPrice =
